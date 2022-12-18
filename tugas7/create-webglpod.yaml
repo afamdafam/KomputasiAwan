@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: webgl-pod
+spec:
+   containers:
+   - name: webgl-containere
+     image: php-webgl
+     imagePullPolicy: Never
+     ports:
+     - containerPort: 6379

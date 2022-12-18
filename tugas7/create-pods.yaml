@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webgl-pods
+spec:
+  selector:
+    matchLabels:
+      app: webgl
+  replicas: 4 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: webgl
+    spec:
+      containers:
+      - name: webgl
+        image: php-webgl:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 30390
