@@ -44,5 +44,3 @@ networks:
   wpsite:
 volumes:
   db_data:
-
-  
